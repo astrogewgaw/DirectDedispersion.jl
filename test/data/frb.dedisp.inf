@@ -1,0 +1,25 @@
+ Data file name without suffix          =  frb.dedisp
+ Telescope used                         =  GMRT
+ Instrument used                        =  unset
+ Object being observed                  =  Unknown
+ J2000 Right Ascension (hh:mm:ss.ssss)  =  00:45:50.1975
+ J2000 Declination     (dd:mm:ss.ssss)  =  -11:27:32.9619
+ Data observed by                       =  unset
+ Epoch of observation (MJD)             =  59000.000001428241376
+ Barycentered?           (1 yes, 0 no)  =  0
+ Number of bins in the time series      =  20480      
+ Width of each time series bin (sec)    =  0.00131072
+ Any breaks in the data? (1 yes, 0 no)  =  0
+ Type of observation (EM band)          =  Radio
+ Beam diameter (arcsec)                 =  3600
+ Dispersion measure (cm-3 pc)           =  1000
+ Central freq of low channel (MHz)      =  300.78125
+ Total bandwidth (MHz)                  =  200
+ Number of channels                     =  128
+ Channel bandwidth (MHz)                =  1.5625
+ Data analyzed by                       =  upanda
+ Any additional notes:
+    Project ID unset, Date: 2020-05-31T00:00:00.1234.
+    2 polns were summed.  Samples have 8 bits.
+
+
