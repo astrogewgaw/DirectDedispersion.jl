@@ -1,5 +1,7 @@
 <div align="center">
 <h1><code>DirectDedispersion.jl</code></h1>
+<h4><i>Direct dedispersion, in Julia.</i></h4>
+<br/>
 
 ![License][license]
 ![GitHub Stars][stars]
@@ -39,7 +41,6 @@ The simulation was carried out using the [**`simulateSearch`**](https://bitbucke
 
 [gitmoji]: https://gitmoji.dev
 [presto]: https://github.com/scottransom/presto
-[paper]: https://ui.adsabis.harvard.edu/abs/1995A%26A...300..707T/abstract
 [gitmoji_badge]: https://img.shields.io/badge/gitmoji-%20😜%20😍-FFDD67.svg?style=for-the-badge
 [stars]: https://img.shields.io/github/stars/astrogewgaw/DirectDedispersion.jl?style=for-the-badge
 [license]: https://img.shields.io/github/license/astrogewgaw/DirectDedispersion.jl?style=for-the-badge
