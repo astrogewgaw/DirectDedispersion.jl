@@ -21,21 +21,26 @@ This package implements the **direct dedispersion algorithm** in pure Julia. Quo
 Install it by typing and running:
 
 ```bash
-] add DirecDedispersion
+] add DirectDedispersion
 ```
 
 in the Julia REPL.
 
-
-Here is an example of the same time series, obtained via [**`PRESTO`**][presto] and via `DirectDedispersion.jl`, from 30 seconds of data with a simulated FRB. The FRB has a DM of 1000 pc cm$^{-3}$, and an arrival time of 15 seconds[^1]:
+Here is an example of the same time series, obtained via `DirectDedispersion.jl` and [**`PRESTO`**][presto], respectively, from 30 seconds of simulated FRB data. The FRB has a DM of 1000 pc cm$^{-3}$, and an arrival time of 5 seconds:
 
 <br/>
 
-![Plot: Example dedispersed time series](./assets/ts.png)
+|   |   |
+| - | - |
+| ![Plot: Example dedispersed time series via DirectDedispersion.jl](./assets/example_dd.png) | ![Plot: Example dedispersed time series via PRESTO](./assets/example_presto.png) |
 
-The simulation was carried out using the [**`simulateSearch`**](https://bitbucket.csiro.au/projects/PSRSOFT/repos/simulatesearch/browse) library, and is included in this package as a part of its testing suite [**here**](./test/data/frb.fil).
+The incline in both plots is due to the fact that the DM of the simulated FRB is quite high, and the length of the file is low. Thus, we run out of samples to add as we go to lower frequency channels. The simulation was carried out using the [**`simulateSearch`**](https://bitbucket.csiro.au/projects/PSRSOFT/repos/simulatesearch/browse) library, and is included in this package as a part of its testing suite [**here**](./test/data/frb.fil). The plot from [**`PRESTO`**][presto] was obtained by using the following command: 
 
-[^1]: The incline is due to the fact that the burst is present towards the end of the file, and the dispersion trail gets cut off. Hence, we end up summing less and less samples the closer we get to the end of the trail, leading to an odd incline. The same, but less steep, incline can be noticed in the `PRESTO` output.
+```bash
+prepdata -dm 1000.0 -nobary -noclip frb.fil -o frb.dedisp
+```
+
+Note that the `-noclip` option is necessary for a fair comparison, since otherwise `PRESTO` performs a running mean on the time series, removing the incline seen above. Thus, we turn it off, obtaining the unprocessed dedispersed time series. As can be seen from the above plot, things seem to be working as expected 👍.
 
 </div>
 
