@@ -13,7 +13,7 @@
  Type of observation (EM band)          =  Radio
  Beam diameter (arcsec)                 =  3600
  Dispersion measure (cm-3 pc)           =  1000
- Central freq of low channel (MHz)      =  300.78125
+ Central freq of low channel (MHz)      =  300
  Total bandwidth (MHz)                  =  200
  Number of channels                     =  128
  Channel bandwidth (MHz)                =  1.5625

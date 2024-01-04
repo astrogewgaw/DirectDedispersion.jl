@@ -9,7 +9,7 @@ using DirectDedispersion
 
         Δf = 200.0
         dm = 1000.0
-        f₀ = 499.21875
+        f₀ = 498.4375
         δt = 1.31072e-3
 
         ts = DirectDedispersion.dd(
@@ -23,8 +23,8 @@ using DirectDedispersion
         nt = size(ts, 1)
         t = range(0.0, nt * δt, nt)
 
-        @test argmax(ts) == 3902
-        @test maximum(ts) ≈ 8472.0
-        @test t[argmax(ts)] ≈ 5.0 atol = 1.0
+        @test argmax(ts) == 3898
+        @test maximum(ts) ≈ 27756.0
+        @test t[argmax(ts)] ≈ 5.0 atol = 0.125
     end
 end

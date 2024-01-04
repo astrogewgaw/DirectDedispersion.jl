@@ -34,13 +34,11 @@ Here is an example of the same time series, obtained via `DirectDedispersion.jl`
 | - | - |
 | ![Plot: Example dedispersed time series via DirectDedispersion.jl](./assets/example_dd.png) | ![Plot: Example dedispersed time series via PRESTO](./assets/example_presto.png) |
 
-The incline in both plots is due to the fact that the DM of the simulated FRB is quite high, and the length of the file is low. Thus, we run out of samples to add as we go to lower frequency channels. The simulation was carried out using the [**`simulateSearch`**](https://bitbucket.csiro.au/projects/PSRSOFT/repos/simulatesearch/browse) library, and is included in this package as a part of its testing suite [**here**](./test/data/frb.fil). The plot from [**`PRESTO`**][presto] was obtained by using the following command: 
+The slight incline in both plots is due to the fact that the DM of the simulated FRB is quite high, and the length of the file is low. Thus, we run out of samples to add as we go to lower frequency channels. The simulation was carried out using the [**`simulateSearch`**](https://bitbucket.csiro.au/projects/PSRSOFT/repos/simulatesearch/browse) library, and is included in this package as a part of its testing suite [**here**](./test/data/frb.fil). The time series from [**`PRESTO`**][presto] was obtained by using the following command:
 
 ```bash
-prepdata -dm 1000.0 -nobary -noclip frb.fil -o frb.dedisp
+prepdata -dm 1000.0 -nobary frb.fil -o frb.dedisp
 ```
-
-Note that the `-noclip` option is necessary for a fair comparison, since otherwise `PRESTO` performs a running mean on the time series, removing the incline seen above. Thus, we turn it off, obtaining the unprocessed dedispersed time series. As can be seen from the above plot, things seem to be working as expected 👍.
 
 </div>
 
