@@ -40,6 +40,12 @@ The slight incline in both plots is due to the fact that the DM of the simulated
 prepdata -dm 1000.0 -nobary frb.fil -o frb.dedisp
 ```
 
+Here is another example, this time using real data taken for **FRB180916**, from the **Giant Metrewave Radio Telescope (GMRT)**:
+
+|   |   |
+| - | - |
+| ![Plot: Example dedispersed time series for FRB180916 via DirectDedispersion.jl](./assets/frb180916_dd.png) | ![Plot: Example dedispersed time series for FRB180916 via PRESTO](./assets/frb180916_presto.png) |
+
 </div>
 
 [gitmoji]: https://gitmoji.dev
